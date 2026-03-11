@@ -1,0 +1,48 @@
+# Cursor Rules
+
+The following rules apply to all TypeScript and JavaScript files in this project:
+
+## Coding Style & Immutability (CRITICAL)
+- ALWAYS create new objects, NEVER mutate existing ones.
+- Use the spread operator for immutable updates (e.g. `return { ...user, name }`).
+- Rationale: Immutable data prevents hidden side effects, makes debugging easier, and enables safe concurrency.
+
+## File Organization
+- MANY SMALL FILES > FEW LARGE FILES
+- High cohesion, low coupling.
+- 200-400 lines typical, 800 max.
+- Extract utilities from large modules; organize by feature/domain, not by type.
+
+## Error Handling
+- ALWAYS handle errors comprehensively at every level.
+- Use `async/await` with `try-catch`.
+- Provide user-friendly error messages in UI-facing code.
+- Log detailed error context on the server side; never silently swallow errors.
+
+## Input Validation
+- ALWAYS validate at system boundaries.
+- Use schema-based validation (like **Zod**) where available.
+- Fail fast with clear error messages. Never trust external data.
+
+## Code Quality
+- No `console.log` statements in production code. Use proper logging libraries instead.
+- Functions should be small (<50 lines).
+- No deep nesting (>4 levels).
+- Avoid hardcoded values (use constants or config).
+
+## Testing Requirements
+- **Minimum Test Coverage: 80%**
+- Required Test Types:
+  1. Unit Tests (Individual functions, utilities, components)
+  2. Integration Tests (API endpoints, database operations)
+  3. E2E Tests (Playwright for critical user flows)
+
+### Test-Driven Development (MANDATORY)
+1. Write test first (RED)
+2. Run test - it should FAIL
+3. Write minimal implementation (GREEN)
+4. Run test - it should PASS
+5. Refactor (IMPROVE)
+6. Verify coverage (80%+)
+
+If tests fail, fix the implementation, not the tests (unless the tests are wrong). Verify mocks and isolation.

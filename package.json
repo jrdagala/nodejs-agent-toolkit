@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-agent-toolkit",
+  "version": "1.0.0",
+  "description": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+  "main": "index.js",
+  "bin": {
+    "nodejs-agent-toolkit": "bin/init.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrdagala/nodejs-agent-toolkit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "nodejs-agent-toolkit": "./bin/init.js"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jrdagala/nodejs-agent-toolkit/issues"
+  },
+  "homepage": "https://github.com/jrdagala/nodejs-agent-toolkit#readme"
+}
